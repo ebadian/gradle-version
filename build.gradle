@@ -7,7 +7,7 @@ plugins {
 // force mionor release
 scmVersion {
     tag {
-        prefix = 'atlas-publisher'
+        prefix = 'some-name'
     }
 
     checks {
