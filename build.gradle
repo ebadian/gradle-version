@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'pl.allegro.tech.build.axion-release' version '1.10.3'
+}
+
+//Test ./gradlew release -Prelease.versionIncrementer=incrementMinor
+// force mionor release
+scmVersion {
+    tag {
+        prefix = 'atlas-publisher'
+    }
+
+    checks {
+        uncommittedChanges = false
+        aheadOfRemote = false
+        snapshotDependencies = false
+    }
+    versionIncrementer 'incrementMinor'
+}
+
+project.version = scmVersion.version
+
+group 'org.example'
+
+
+repositories {
+    mavenCentral()
+}
+//Test
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
