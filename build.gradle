@@ -5,6 +5,7 @@ plugins {
 
 //Test ./gradlew release -Prelease.versionIncrementer=incrementMinor
 // force mionor release
+//new line
 scmVersion {
     tag {
         prefix = 'some-name'
